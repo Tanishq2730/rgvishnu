@@ -1471,7 +1471,8 @@ section,
 
 .services .service-item h3 {
   font-size: 1.25rem;
-  margin-bottom: 15px;margin-top: 1em;
+  margin-bottom: 15px;
+  margin-top: 1em;
   font-weight: 600;
 }
 
@@ -2029,7 +2030,7 @@ section,
   z-index: 1020;
 }
 
-.aboutbtn{
+.aboutbtn {
   background-color: #e87532;
   border-radius: 20px;
   border: none;
@@ -2055,7 +2056,12 @@ section,
   color: #fff;
 }
 
-.service-item img{
+.service-item img {
   width: 100%;
   border-radius: 10px;
+}
+
+
+.gallery .row{
+  margin: 15px;
 }
