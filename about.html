@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Index - EasyFolio Bootstrap Template</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Vishnu RG - CEO/Executive Director - RG Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Vishnu RG - CEO/Executive Director - RG Group">
+    <meta name="keywords" content="RG Vishnu,RG Group,CEO,RG Gingelly,who,India,son,Ramesh RG">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -48,6 +49,9 @@
   </head>
 
   <body class="index-page">
+    <div id="loader">
+      <img src="./assets/img/Black Gif.gif" alt="Loading..." />
+    </div>
     <header id="header" class="header d-flex align-items-center sticky-tops">
       <div
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
@@ -55,7 +59,7 @@
         <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <img src="./assets/img/logo.svg" />
+          <img src="./assets/img//logo-black.png" />
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -698,11 +702,15 @@
 
     <footer class="footer">
       <div class="container">
+        <div class="contactussection">
+          <h2>Get In Touch</h2>
+          <a href="./contact.html" class="btn btn-group aboutbtn">Contact Us</a>
+        </div>
         <div class="row">
           <div class="col-md-3">
             <div class="footer-logo">
-              <h2 class="text-white">RG Vishnu</h2>
-              <p>FORGING FUTURE TOGETHER</p>
+              <img src="./assets/img/logo-white.png" class="w-100" alt="" />
+              <p class="mt-5">FORGING FUTURE TOGETHER</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -776,6 +784,18 @@
         let stop = setInterval(function () {
           counterup();
         }, 90);
+      });
+    </script>
+    <script>
+      // Page load hone ke baad bhi 5s tak loader dikhana
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("loader").classList.add("hidden");
+          setTimeout(function () {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("content").style.display = "block";
+          }, 1000); // 1s transition complete hone ka wait karega
+        }, 2000); // 5000ms = 5s
       });
     </script>
   </body>
