@@ -626,8 +626,28 @@ h6 {
     font-size: 2rem;
   }
 
+  .herobanners {
+    flex-direction: column-reverse;
+  }
+
+  .herobanners .hero-image {
+    margin-bottom: 1em;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px 0 !important;
+  }
+
   .page-title .title-wrapper p {
     font-size: 1rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
 }
 
@@ -791,7 +811,7 @@ section,
 
 @media (max-width: 576px) {
   .hero .hero-stats {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 1.5rem;
   }
 }
@@ -1179,6 +1199,7 @@ section,
   background-color: color-mix(in srgb, var(--surface-color), transparent 50%);
   color: var(--default-color);
   transition: all 0.3s ease-in-out;
+  border: 1px solid #e87532;
 }
 
 .portfolio .portfolio-filters li:hover {
@@ -1304,6 +1325,10 @@ section,
   .portfolio .portfolio-filters li {
     font-size: 14px;
     padding: 6px 15px;
+  }
+
+  .footer-logo{
+    margin-bottom: 1em;
   }
 
   .portfolio .portfolio-card .portfolio-content {
@@ -2117,12 +2142,12 @@ section,
   padding: 4px 0;
 }
 
-.copywrite{
+.copywrite {
   padding-top: 25px;
   border-top: 0.4px solid #fff;
 }
 
-.footer .location iframe{
+.footer .location iframe {
   margin-top: 8px;
 }
 /* footer css end */
@@ -2145,38 +2170,49 @@ section,
   visibility: hidden;
 }
 
-.contactussection{
+.contactussection {
   text-align: center;
-    padding: 2em 0;
-    background-color: #fff;
-    border-radius: 100px;
-    margin-top: -8em;
-    margin-bottom: 2em;
-    border: 2px solid #afafaf;
+  padding: 2em 0;
+  background-color: #fff;
+  border-radius: 100px;
+  margin-top: -8em;
+  margin-bottom: 2em;
+  border: 2px solid #afafaf;
 }
 
-.contactussection .btn{
+.contactussection .btn {
   color: #fff;
   margin-top: 0.5em;
   text-decoration: none;
 }
-.contactussection .btn:hover{
+.contactussection .btn:hover {
   color: #fff;
   background-color: #000;
   text-decoration: none;
 }
-.logosliderbtn .btn{
+.logosliderbtn .btn {
   color: #fff;
   margin-top: 0.5em;
   text-decoration: none;
+  border-radius: 5px 0px 0px 5px;
+  padding: 10px 20px;
 }
-.logosliderbtn .btn:hover{
+.logosliderbtn .btn:hover {
   color: #fff;
   background-color: #000;
   text-decoration: none;
 }
 
-.contactussection a{
+.logosliderbtn {
+  display: flex;
+  justify-content: right;
+}
+
+.contactussection {
+  display: none;
+}
+
+.contactussection a {
   text-decoration: none;
 }
 
@@ -2194,12 +2230,20 @@ section,
 }
 @media (max-width: 768px) {
   .gallery {
-      column-count: 2;
+    column-count: 2;
   }
 }
 @media (max-width: 480px) {
   .gallery {
-      column-count: 1;
+    column-count: 1;
   }
 }
 /* gallery css end */
+
+#loader img {
+  width: 25%;
+}
+
+.footer .header-social-links a {
+  margin: 0 0.5em;
+}
