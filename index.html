@@ -82,7 +82,7 @@
         </nav>
 
         <div class="header-social-links">
-          <a href="https://www.facebook.com/vishnurg/" class="facebook"
+          <!-- <a href="https://www.facebook.com/vishnurg/" class="facebook"
             ><i class="bi bi-facebook"></i
           ></a>
           
@@ -93,7 +93,8 @@
             href="https://www.linkedin.com/in/rg-vishnu-716a55174/"
             class="linkedin"
             ><i class="bi bi-linkedin"></i
-          ></a>
+          ></a> -->
+          <i class="bi bi-geo-alt" style="color: #e87532"></i> I'm in Kerala.
         </div>
       </div>
     </header>
@@ -117,21 +118,18 @@
                   >Profile</a
                 >
               </div>
-              <div class="currentLocation">
-                <h4 class="mt-4 mb-0">Currently, I'm in Kerala.</h4>
-              </div>
               <div class="hero-stats">
                 <div class="stat-item">
-                  <span class="stat-number count" data-number="25">25+</span>
-                  <span class="stat-label">Years Experience</span>
+                  <span class="stat-number count" data-number="1">0 Lakhs</span>
+                  Outlets
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number count" data-number="18">18+</span>
-                  <span class="stat-label">Countries</span>
+                  <span class="stat-number count" data-number="18">0+</span>
+                  Countries
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number count" data-number="200">200+</span>
-                  <span class="stat-label">Distributors</span>
+                  <span class="stat-number count" data-number="450">0+</span>
+                  Distributors
                 </div>
               </div>
             </div>
@@ -220,7 +218,7 @@
                     <div class="col-6">
                       <div class="info-item">
                         <span class="label">Phone</span>
-                        <span class="value"> +91 77361 12233</span>
+                        <span class="value"> +919388374023</span>
                       </div>
                     </div>
 
@@ -263,15 +261,37 @@
 
       <!-- logo slider section start -->
       <section>
-        <div class="logoSlider"></div>
+        <!-- <div class="logoSlider"></div> -->
+        <div class="container">
+          <div class="logoSection">
+            <div class="row">
+              <div class="col-md-4 m-auto">
+                <div class="logocard m-auto">
+                  <img src="./assets/img/rglogo1.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="logocard">
+                  <img src="./assets/img/rglogo2.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="logocard">
+                  <img src="./assets/img/rglogo3.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="btnfood text-center logosliderbtn">
-          <a href="https://www.rgfoods.in"
+          <a
+            href="https://www.rgfoods.in"
             class="btn btn-group aboutbtn text-white"
             style="margin-top: 3em"
             target="_blank"
           >
             Visit RG Foods
-        </a>
+          </a>
         </div>
       </section>
 
@@ -536,7 +556,7 @@
       <!-- Testimonials Section -->
       <section id="testimonials" class="testimonials section light-background">
         <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
+        <div class="container section-title">
           <h2>Awards</h2>
           <div class="title-shape">
             <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
@@ -854,7 +874,7 @@
       <!-- Faq Section -->
       <section id="faq" class="faq section">
         <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
+        <div class="container section-title">
           <h2>Frequently Asked Questions</h2>
           <div class="title-shape">
             <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
@@ -1093,8 +1113,8 @@
           <div class="col-md-3">
             <h5>Get In Touch</h5>
             <p>RG Group, Corporation Bldg., Cherooty Road, 673001</p>
-            <p><i class="bi bi-telephone"></i> +91 77361 12233</p>
-            <p><i class="bi bi-envelope"></i> mail@rgvishnu.com</p>
+            <p><i class="bi bi-telephone"></i> +919388374023</p>
+            <p><i class="bi bi-envelope"></i> Office@rgvishnu.com</p>
           </div>
           <div class="col-md-3 location">
             <h5>Location</h5>
@@ -1136,25 +1156,25 @@
     <script src="assets/js/main.js"></script>
     <script>
       let count = document.querySelectorAll(".count");
-      let arr = Array.from(count);
 
-      arr.map(function (item) {
+      count.forEach((item) => {
         let startnumber = 0;
+        let targetNumber = parseInt(item.dataset.number); // Target number le lo
+        let text = item.innerHTML.replace(/[0-9,]+/g, "").trim(); // Text ko extract karo
 
         function counterup() {
           startnumber++;
-          item.innerHTML = startnumber;
+          item.innerHTML = `${startnumber.toLocaleString()}${text}`; // Number ke saath text add karo
 
-          if (startnumber == item.dataset.number) {
+          if (startnumber === targetNumber) {
             clearInterval(stop);
           }
         }
 
-        let stop = setInterval(function () {
-          counterup();
-        }, 30);
+        let stop = setInterval(counterup, 10); // Speed adjust karo
       });
     </script>
+
     <script>
       // Page load hone ke baad bhi 5s tak loader dikhana
       window.addEventListener("load", function () {

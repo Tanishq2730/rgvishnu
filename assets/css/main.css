@@ -2247,3 +2247,7 @@ section,
 .footer .header-social-links a {
   margin: 0 0.5em;
 }
+
+.logocard img{
+  width: 100% !important;
+}
